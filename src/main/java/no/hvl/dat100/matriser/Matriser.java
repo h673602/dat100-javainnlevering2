@@ -43,7 +43,6 @@ public class Matriser {
 		for (int i = 0; i < a.length; i++) {
 			for (int j = 0; j < a[i].length; j++) {
 				x = a[i][j];
-
 				y = b[i][j];
 				if (x == y) {
 					return true;
@@ -52,5 +51,4 @@ public class Matriser {
 		}
 		return false;
 	}
-
 }
