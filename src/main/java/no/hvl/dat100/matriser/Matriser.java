@@ -24,10 +24,12 @@ public class Matriser {
 
 	// c)
 	public static int[][] skaler(int tall, int[][] matrise) {
+		int gange = 0;
 		int [][] produkt = new int [matrise.length][matrise[0].length];
 		for (int i = 0; i < matrise.length; i++) {
 			for (int j = 0; j < matrise[i].length; j++) {
-				produkt[i][j] = j * tall;
+				gange = matrise[i][j] * tall;
+				produkt[i][j] = gange;
 			}
 		}
 		return produkt;
@@ -36,25 +38,8 @@ public class Matriser {
 	// d)
 	public static boolean erLik(int[][] a, int[][] b) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden erLik ikke implementert");
+		
 
 	}
 
-	// e)
-	public static int[][] speile(int[][] matrise) {
-
-		// TODO
-
-		throw new UnsupportedOperationException("Metoden speile ikke implementert");
-
-	}
-
-	// f)
-	public static int[][] multipliser(int[][] a, int[][] b) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden multipliser ikke implementert");
-
-	}
 }
