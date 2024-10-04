@@ -38,8 +38,22 @@ public class Matriser {
 	// d)
 	public static boolean erLik(int[][] a, int[][] b) {
 
+		int x = 0;
+		int y = 0;
+		for (int i = 0; i < a.length; i++) {
+			for (int j = 0; j < a[i].length; j++);
 		
-
+			x = a[i][0];
+		}
+		for (int i = 0; i < b.length; i++) {
+			for (int j = 0; j < b[i].length; j++);
+			
+			y = b[i][0];
+			if (x == y) {
+			return true;	
+			}
+		}
+		return false;
 	}
 
 }
