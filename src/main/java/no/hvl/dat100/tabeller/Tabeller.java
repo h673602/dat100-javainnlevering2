@@ -14,14 +14,10 @@ public class Tabeller {
 	// b)
 	public static String tilStreng(int[] tabell) {
 
-		String[] tall = {};
+		String[] talltabell = { "42", "67", "89" };
 
-		tall[0] = "42";	
-		tall[1] = "67";
-		tall[2] = "89";
-		
-		return tall;
-		
+		return talltabell;
+
 	}
 
 	// c)
@@ -39,32 +35,33 @@ public class Tabeller {
 	// d)
 	public static boolean finnesTall(int[] tabell, int tall) {
 		for (int i : tabell) {
-	        if (i == tall) {
-	            return true;
-	        }
-	    }
-	    return false;
+			if (i == tall) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	// e)
 	public static int posisjonTall(int[] tabell, int tall) {
 
-		for (int i : tabell) {
-	        if (i == tall) {
-	            return i;
-	        }
-	    }
-	    return -1;
+		int j = 0;
+		for (int i = 0; i < tabell.length; i++) {
+			j = tabell[i];
+			if (j == tall) {
+				return i;
+			}
+		}
+		return -1;
 	}
 
 	// f)
 	public static int[] reverser(int[] tabell) {
 
-		for(int i = 0; i < tabell.length / 2; i++)
-		{
-		    int posisjon = tabell[i];
-		    tabell[i] = tabell[tabell.length - i - 1];
-		    tabell[tabell.length - i - 1] = posisjon;
+		for (int i = 0; i < tabell.length / 2; i++) {
+			int posisjon = tabell[i];
+			tabell[i] = tabell[tabell.length - i - 1];
+			tabell[tabell.length - i - 1] = posisjon;
 		}
 		return tabell;
 	}
@@ -74,14 +71,14 @@ public class Tabeller {
 
 		int j = 0;
 		boolean sortert = true;
-		while(sortert && j < tabell.length - 1) {
+		while (sortert && j < tabell.length - 1) {
 			if (tabell[j] > tabell[j + 1]) {
 				sortert = false;
 			}
 			j++;
 		}
-	return sortert;
-		
+		return sortert;
+
 	}
 
 	// h)
@@ -91,16 +88,16 @@ public class Tabeller {
 		int a2 = tabell2.length;
 		int a3 = a1 + a2;
 		int[] tabell3 = new int[a3];
-		
+
 		for (int i = 0; i < a1; i = i + 1) {
-			
-            tabell3[i] = tabell1[i];
-        }
 
-        for (int i = 0; i < a2; i = i + 1) {
+			tabell3[i] = tabell1[i];
+		}
 
-            tabell3[a1 + i] = tabell2[i];
-        }
+		for (int i = 0; i < a2; i = i + 1) {
+
+			tabell3[a1 + i] = tabell2[i];
+		}
 		return tabell3;
 	}
 }
