@@ -25,7 +25,7 @@ public class Matriser {
 	// c)
 	public static int[][] skaler(int tall, int[][] matrise) {
 		int gange = 0;
-		int [][] produkt = new int [matrise.length][matrise[0].length];
+		int[][] produkt = new int[matrise.length][matrise[0].length];
 		for (int i = 0; i < matrise.length; i++) {
 			for (int j = 0; j < matrise[i].length; j++) {
 				gange = matrise[i][j] * tall;
@@ -41,16 +41,13 @@ public class Matriser {
 		int x = 0;
 		int y = 0;
 		for (int i = 0; i < a.length; i++) {
-			for (int j = 0; j < a[i].length; j++);
-		
-			x = a[i][0];
-		}
-		for (int i = 0; i < b.length; i++) {
-			for (int j = 0; j < b[i].length; j++);
-			
-			y = b[i][0];
-			if (x == y) {
-			return true;	
+			for (int j = 0; j < a[i].length; j++) {
+				x = a[i][j];
+
+				y = b[i][j];
+				if (x == y) {
+					return true;
+				}
 			}
 		}
 		return false;
